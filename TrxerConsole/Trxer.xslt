@@ -364,7 +364,7 @@
             </tbody>
           </table>
           <Table>
-            <caption>Five most slowest tests</caption>
+            <caption>50 most slowest tests</caption>
             <thead>
               <tr class="odd">
                 <th scope="col">Time</th>
@@ -377,7 +377,7 @@
             <tbody>
               <xsl:for-each select="/t:TestRun/t:Results/t:UnitTestResult">
                 <xsl:sort select="@duration" order="descending"/>
-                <xsl:if test="position() &gt;= 1 and position() &lt;=5">
+                <xsl:if test="position() &gt;= 1 and position() &lt;=50">
                   <xsl:variable name="testId" select="@testId" />
                   <tr>
                     <th scope="row" class="column1">
@@ -451,7 +451,6 @@
     </xsl:for-each>
   </xsl:template>
 
-
   <xsl:template name="tDetails">
     <xsl:param name="testId" />
     <xsl:param name="testDescription" />
@@ -460,7 +459,6 @@
         <th scope="row" class="column1">
           <xsl:value-of select="trxreport:GetShortDateTime(@startTime)" />
         </th>
-
 
         <xsl:call-template name="tStatus">
           <xsl:with-param name="testId" select="$testId" />
@@ -472,7 +470,6 @@
           <xsl:call-template name="imageExtractor">
             <xsl:with-param name="testId" select="$testId" />
           </xsl:call-template>
-
 
         </td>
         <td class="Messages">
@@ -539,12 +536,6 @@
     </xsl:for-each>
   </xsl:template>
 
-
-
-
-
-
-
   <xsl:template name="debugInfo">
     <xsl:param name="testId" />
     <xsl:for-each select="/t:TestRun/t:Results/t:UnitTestResult[@testId=$testId]/t:Output">
@@ -572,10 +563,7 @@
         <xsl:value-of select="$MessageErrorInfo"/>
         <br/>
       </xsl:if>
-
-
-
+      
     </xsl:for-each>
   </xsl:template>
 </xsl:stylesheet>
-

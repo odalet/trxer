@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <Version>1.1.0</Version>
+    <Product>Trxer</Product>
+    <Authors>Original author: https://github.com/NivNavick/trxer</Authors>
+    <Company />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="functions.js" />
+    <None Remove="Trxer.css" />
+    <None Remove="Trxer.xslt" />
+    <None Remove="TrxerTable.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="functions.js" />
+    <EmbeddedResource Include="Trxer.css" />
+    <EmbeddedResource Include="Trxer.xslt" />
+    <EmbeddedResource Include="TrxerTable.css" />
+  </ItemGroup>
+
+</Project>

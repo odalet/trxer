@@ -34,10 +34,10 @@ tr.odd .column1 {
     background: #dbedff;
 }
 
-tr.odd.column1Failed	{
-	background:#fed9d9;
-	width:30px;
-	}
+tr.odd.column1Failed {
+    background: #fed9d9;
+    width: 30px;
+}
 
 tr.odd td, tr.sep td {
     background: #FFFFFF;
@@ -134,7 +134,6 @@ td.passed {
 
 td {
     color: #425b71;
-    ;
     padding: .3em 1em;
     text-align: center;
     border-left: 1px solid #a2caf2;
@@ -168,15 +167,15 @@ tfoot th {
     background: #f4f9fe;
 }
 
-    tfoot th strong {
-        font: bold 1.2em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
-        margin: .5em .5em .5em 0;
-        color: #678197;
-    }
+tfoot th strong {
+    font: bold 1.2em "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    margin: .5em .5em .5em 0;
+    color: #678197;
+}
 
-    tfoot th em {
-        color: #678197;
-        font-weight: bold;
-        font-size: 1.1em;
-        font-style: normal;
-    }
+tfoot th em {
+    color: #678197;
+    font-weight: bold;
+    font-size: 1.1em;
+    font-style: normal;
+}

@@ -1,4 +1,3 @@
-
 html,
 body,
 form,
@@ -121,7 +120,6 @@ address {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAJFBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAW+S7RAAAAC3RSTlMAABBAYHCfv8/f7y5wfg4AAACNSURBVHhendC9DYMwFEXhq0BEi7egTJEBIlHSuKdhBHpGYARGSEtA8JaDBwjbt0Aop/zk5z8Y6gZoh8KVyVrl4NEqDDiXZ7JVGZPu0O4wbPDsxGuyKCXoh28IM4Q6YMzfTQAfIPahx1rhQa2QONAJnXHwUoiugEd4Uz6WL8ZXF4qfP/EH9fSFs4Wh/oAFE9baEPQEC+YAAAAASUVORK5CYIIyNjk=');
 }
 
-
 #exceptionArrow {
     float: left;
     font-size: 20px;
@@ -159,7 +157,6 @@ a:focus {
     border-bottom: 1px solid #f03b58;
     text-decoration: none;
 }
-
 
 .StatusesBorders {
     border-width: 0;
@@ -307,12 +304,10 @@ td.slowest {
     float: right;
 }
 
-    .OpenMoreButton:hover {
-        background-color: #bfe3ff;
-        text-decoration: none;
-    }
-
-
+.OpenMoreButton:hover {
+    background-color: #bfe3ff;
+    text-decoration: none;
+}
 
 #MoreButtonText {
     color: #1b99fb;

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrxerConsole", "TrxerConsole\TrxerConsole.csproj", "{48849461-6971-4B2B-8FC6-FBDD3E8ADBFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "trxer", "TrxerConsole\trxer.csproj", "{70160893-C77D-41D1-8311-67A7750602C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{48849461-6971-4B2B-8FC6-FBDD3E8ADBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{48849461-6971-4B2B-8FC6-FBDD3E8ADBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{48849461-6971-4B2B-8FC6-FBDD3E8ADBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{48849461-6971-4B2B-8FC6-FBDD3E8ADBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70160893-C77D-41D1-8311-67A7750602C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70160893-C77D-41D1-8311-67A7750602C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70160893-C77D-41D1-8311-67A7750602C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70160893-C77D-41D1-8311-67A7750602C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B58CCE6-FD53-462C-9CE3-5BA6AC03805B}
 	EndGlobalSection
 EndGlobal

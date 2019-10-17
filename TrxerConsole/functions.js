@@ -1,9 +1,8 @@
-
-var myColor = ["#c0eec0", "#fed9d9", "#FBE87E"];//green,red,yellow
+var myColor = ["#c0eec0", "#fed9d9", "#FBE87E"]; // green, red, yellow
 var myStrokeColor = ["#7CCD7C", "#d42945", "#ffcc00"];
 
 function ShowHide(id1, id2, textOnHide, textOnShow) {
-    if (document.getElementById(id1).className == 'visibleRow') {
+    if (document.getElementById(id1).className === 'visibleRow') {
         document.getElementById(id2).innerHTML = textOnHide;
         document.getElementById(id1).className = 'hiddenRow';
     }
@@ -15,7 +14,7 @@ function ShowHide(id1, id2, textOnHide, textOnShow) {
 
 function AddEventListener() {
     var button = document.getElementById('btn-download');
-    button.addEventListener('click', function () {
+    button.addEventListener('click', function() {
         button.href = canvas.toDataURL('image/png');
     });
 }
@@ -34,13 +33,10 @@ function updateFloatingImage(url) {
     document.getElementById('floatingImage').src = url;
 }
 
-/**
- * @return {number}
- */
 function GetTotal() {
     var myTotal = 0;
     for (var j = 0; j < myData.length; j++) {
-        myTotal += (typeof myData[j] == 'number') ? myData[j] : 0;
+        myTotal += typeof myData[j] === 'number' ? myData[j] : 0;
     }
     return myTotal;
 }
@@ -67,21 +63,17 @@ function CreateHorizontalBars(id, totalPass, totalFailed, totalWarn) {
     var currX = -12;
 
     ctx.translate(cw / 2, ch / 2);
-
     ctx.rotate(Math.PI / 2);
-
     ctx.restore();
 
-    for (var i = 0 ; i < myArray.length; i++) {
+    for (var i = 0; i < myArray.length; i++) {
         ctx.moveTo(100, 0);
         ctx.fillStyle = myColor[i];
         var h = myArray[i];
-        ctx.fillRect(currX, (canvas.height - h) + 25, width, h);
+        ctx.fillRect(currX, canvas.height - h + 25, width, h);
         currX += width + 1;
     }
 }
-
-
 
 function CreatePie() {
     var canvas;
@@ -99,8 +91,7 @@ function CreatePie() {
         ctx.fillStyle = myColor[i];
         ctx.beginPath();
         ctx.moveTo(160, 75);
-        ctx.arc(160, 75, 75, lastend, lastend +
-            (Math.PI * 2 * (myData[i] / myTotal)), false);
+        ctx.arc(160, 75, 75, lastend, lastend + Math.PI * 2 * (myData[i] / myTotal), false);
         ctx.lineTo(160, 75);
         ctx.fill();
         lastend += Math.PI * 2 * (myData[i] / myTotal);
@@ -166,9 +157,9 @@ var myParsedData = [];
 function CalculateTotalPrecents() {
 
     var totalTests = allPassed + allFailed + allWarns;
-    var passedPrec = (allPassed / totalTests) * 100;
-    var failedPrec = (allFailed / totalTests) * 100;
-    var warnPrec = (allWarns / totalTests) * 100;
+    var passedPrec = allPassed / totalTests * 100;
+    var failedPrec = allFailed / totalTests * 100;
+    var warnPrec = allWarns / totalTests * 100;
 
     myData.push(passedPrec);
     myData.push(failedPrec);
@@ -206,13 +197,9 @@ function CalculateTestsStatuses(testContaineId, canvasId) {
     }
 
     var totalTests = totalFailed + totalInconclusive + totalPassed;
-    var passedPrec = (totalPassed / totalTests) * 100;
-    var failedPrec = (totalFailed / totalTests) * 100;
-    var warnPrec = (totalInconclusive / totalTests) * 100;
-
-
+    var passedPrec = totalPassed / totalTests * 100;
+    var failedPrec = totalFailed / totalTests * 100;
+    var warnPrec = totalInconclusive / totalTests * 100;
+    
     CreateHorizontalBars(canvasId, passedPrec, failedPrec, warnPrec);
 }
-
-
-

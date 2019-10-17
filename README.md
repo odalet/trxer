@@ -1,4 +1,14 @@
 
+## Fork modifications
+
+* Now uses Visual Studio 2019 > 16.3 to build
+* SDK-style project
+* Targets .NET 4.7.2
+* Increased the number of slowest tests from 5 to 50.
+* Version bumped to 1.1.0
+
+## Original Readme
+
 ![11910876](https://cloud.githubusercontent.com/assets/11910876/7189304/c483f1b0-e486-11e4-9a95-44a1243fea5d.png)
 <h3>Transforms trx file into html</h3><br/>
 Trxer is a new way to view Trx Reports,all you need is a browser<br/>
